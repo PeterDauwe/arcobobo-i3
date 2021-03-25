@@ -37,8 +37,8 @@ echo
 
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 51-1"
-	buildFolder=$HOME"/arcolinuxb-build"
-	outFolder=$HOME"/ArcoLinuxB-Out"
+	buildFolder=$HOME"/arcobobo-build"
+	outFolder=$HOME"/ArcoBobo-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
 
 	echo "################################################################## "
@@ -182,10 +182,14 @@ echo
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
 
-	echo "My changes"
+
+
+	echo "My changes - the numbering is here the builddate"
 	echo "Copying the profiledef.sh file to the build folder"
 	cp -f ../archiso/profiledef.sh $buildFolder/archiso/profiledef.sh
 	echo
+
+
 
 
 	echo "Changing group for polkit folder"
@@ -206,17 +210,17 @@ echo
 
 	#profiledef.sh
 	oldname1='iso_name=arcolinux'
-	newname1='iso_name=arcolinuxb-'$desktop
+	newname1='iso_name=arcobobo-'$desktop
 
 	oldname2='iso_label="arcolinux'
-	newname2='iso_label="arcolinuxb-'$desktop
+	newname2='iso_label="arcobobo-'$desktop
 
 	oldname3='ArcoLinux'
-	newname3='ArcoLinuxB-'$desktop
+	newname3='ArcoBobo-'$desktop
 
 	#hostname
 	oldname4='ArcoLinux'
-	newname4='ArcoLinuxB-'$desktop
+	newname4='ArcoBobo-'$desktop
 
 	#sddm.conf user-session
 	oldname5='Session=xfce'

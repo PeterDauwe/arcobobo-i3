@@ -1,6 +1,7 @@
 #!/bin/bash
 # shellcheck disable=SC2034
 
+desktop="i3"
 date_mybuild=$(date +%y)-$(date +%m)-$(date +%d)
 arcolinuxVersion=$date_mybuild
 
