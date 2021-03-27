@@ -535,7 +535,12 @@ arcolinux-termite-themes-git
 #arcolinux-tint2-themes-git
 arcolinux-tweak-tool-git
 arcolinux-variety-git
+
+########################################################
 arcolinux-wallpapers-git
+noobie-wallpaper1
+########################################################
+
 #arcolinux-wallpapers-lxqt-dual-git
 #arcolinux-xfce4-panel-profiles-git
 #arcolinux-xmobar-git
