@@ -453,7 +453,7 @@ pamac-all
 #pulseaudio-equalizer-ladspa
 #pyakm
 python-pyparted
-#python-pywal
+python-pywal
 #scour
 #screenkey-git
 #sublime-text-dev
@@ -483,7 +483,11 @@ yay-bin
 arcolinux-bin-git
 arcolinux-conky-collection-git
 arcolinux-fonts-git
-arcolinux-grub-theme-vimix-git
+
+#################################################
+#arcolinux-grub-theme-vimix-git
+noobie-grub-theme-vimix
+####################################################
 arcolinux-hblock-git
 arcolinux-keyring
 arcolinux-kvantum-git
@@ -494,49 +498,91 @@ arcolinux-logout-git
 arcolinux-logout-themes-git
 arcolinux-mirrorlist-git
 arcolinux-neofetch-git
-arcolinux-nitrogen-git
+
+######################################
+#arcolinux-nitrogen-git
+noobie-nitrogen
+#######################################
+
 arcolinux-pipemenus-git
-arcolinux-polybar-git
+
+########################################################
+#arcolinux-polybar-git
+noobie-polybar
+########################################################
 arcolinux-qt5-git
 arcolinux-rofi-git
 arcolinux-rofi-themes-git
 
-###############################################
-arcolinux-root-git
+################################################
+#arcolinux-root-git
 noobie-root
 #################################################
-arcolinux-system-config-git
+#################################################
+#arcolinux-system-config-git
+noobie-system-config
+#################################################
+
 arcolinux-systemd-services-git
 arcolinux-termite-themes-git
 arcolinux-tweak-tool-git
-arcolinux-variety-git
+
+######################################
+#arcolinux-variety-git
+noobie-variety
+#####################################
 
 ########################################################
-arcolinux-wallpapers-git
+#arcolinux-wallpapers-git
 noobie-wallpaper1
 ########################################################
 
-arcolinux-zsh-git
+##############################
+#arcolinux-zsh-git
+noobie-zsh
+###############################
+
+
+noobie-candy-icons
+noobie-juno-theme
+noobie-logout
 
 ###########################################################################
 #                           ARCOLINUX DESKTOP FOLDER
 ###########################################################################
 
-arcolinux-i3wm-git
-arcolinux-xfce-git
+###############################################
+#arcolinux-i3wm-git
+noobie-i3wm
+##############################################
+
+
+
+############################
+#arcolinux-xfce-git
+noobie-xfce
+##############################
+
 
 ###########################################################################
 #                           ARCOLINUX CONFIG FOLDER
 ###########################################################################
 
 arcolinux-config-all-desktops-git
-arcolinux-config-i3wm-git
 
+
+#######################################
+###arcolinux-config-i3wm-git
+noobie-config-i3wm
+#######################################
 ###########################################################################
 #                           ARCOLINUX DCONF FOLDER
 ###########################################################################
 
-arcolinux-i3wm-dconf-git
+###################################
+#arcolinux-i3wm-dconf-git
+noobie-i3wm-dconf
+####################################""
 
 ###########################################################################
 #                                ARCOLINUX CALAMARES
@@ -573,8 +619,8 @@ adobe-source-han-sans-cn-fonts
 #                                ARCOLINUX CONFIG CALAMARES
 ###########################################################################
 
-arcob-calamares-config-i3-git
-
+#arcob-calamares-config-i3-git
+noobie-calamares-config-i3
 ###########################################################################
 #                                DISPLAY MANAGERS
 ###########################################################################
@@ -584,7 +630,12 @@ accountsservice
 
 ##sddm
 sddm
-arcolinux-sddm-sugar-candy-git
+###################################################
+#arcolinux-sddm-sugar-candy-git
+noobie-sddm-theme
+####################################################
+
+
 sddm-config-editor-git
 
 ###########################################################################
@@ -655,3 +706,7 @@ xfce4-taskmanager
 ###########################################################################
 polybar
 autorandr
+alacritty
+qt5-quickcontrols2
+qt5-graphicaleffects
+unclutter
