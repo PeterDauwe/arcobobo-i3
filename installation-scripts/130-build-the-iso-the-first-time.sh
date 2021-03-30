@@ -186,7 +186,7 @@ echo
 
 	#echo "My changes - the numbering is here the builddate"
 	#echo "Copying the profiledef.sh file to the build folder"
-	#cp -f ../archiso/profiledef.sh $buildFolder/archiso/profiledef.sh
+	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
 	#echo
 
 
