@@ -244,7 +244,7 @@ poppler-qt5
 #########################################################################
 
 ###applications
-#atom
+atom
 #chromium
 #darktable
 #deadbeef
@@ -263,13 +263,13 @@ imagemagick
 #inkscape
 #libreoffice-fresh
 #lshw
-#meld
+meld
 nitrogen
 numlockx
 #pragha
 #qbittorrent
 scrot
-#simplescreenrecorder
+simplescreenrecorder
 termite
 variety
 #vlc
@@ -456,7 +456,7 @@ python-pyparted
 python-pywal
 #scour
 #screenkey-git
-#sublime-text-dev
+sublime-text-dev
 #the_platinum_searcher-bin
 tmux
 trizen
@@ -621,7 +621,8 @@ adobe-source-han-sans-cn-fonts
 ###########################################################################
 
 #arcob-calamares-config-i3-git
-noobie-calamares-config-i3
+#noobie-calamares-config-i3
+noobie-cal-i3
 ###########################################################################
 #                                DISPLAY MANAGERS
 ###########################################################################
@@ -713,3 +714,12 @@ qt5-graphicaleffects
 unclutter
 noobie-alacritty
 i3lock
+wttr
+
+
+zathura
+zathura-pdf-poppler
+zathura-cb
+zathura-djvu
+vifm
+smplayer

@@ -6,7 +6,7 @@ date_mybuild=$(date +%y)-$(date +%m)-$(date +%d)
 arcolinuxVersion=$date_mybuild
 
 iso_name="arcobobo-i3"
-isoLabel='arcobobo-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
+isoLabel='arcobobbo-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
 iso_publisher="ArcoLinux <http://www.arcolinux.info>"
 iso_application="ArcoLinux Live/Rescue CD"
 iso_version=$date_mybuild
