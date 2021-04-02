@@ -593,9 +593,6 @@ noobie-i3wm-dconf
 ###########################################################################
 
 arco-calamares
-
-
-
 arcolinux-system-installation-git
 arcolinux-welcome-app-git
 arcolinux-calamares-tool-git
@@ -628,7 +625,6 @@ adobe-source-han-sans-cn-fonts
 
 #arcob-calamares-config-i3-git
 noobie-calamares-config-i3
-#noobie-cal-i3
 
 ###########################################################################
 #                                DISPLAY MANAGERS

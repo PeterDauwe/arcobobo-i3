@@ -189,7 +189,7 @@ echo
 	cp -f ../archiso/profiledef.sh $buildFolder/archiso/profiledef.sh
 	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
 
-	cp -f ../archiso/lsb-release $buildFolder/archiso/airootfs/etc/lsb-release
+	cp -f ../archiso/lsb-release2 $buildFolder/archiso/airootfs/etc/lsb-release2
 	cp -f ../archiso/neofetch $buildFolder/archiso/airootfs/usr/bin/neofetch
 
 	echo
