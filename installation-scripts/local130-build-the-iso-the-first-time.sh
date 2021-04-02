@@ -188,6 +188,10 @@ echo
 	echo "Copying the profiledef.sh file to the build folder"
 	cp -f ../archiso/profiledef.sh $buildFolder/archiso/profiledef.sh
 	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
+
+	cp -f ../archiso/lsb-release $buildFolder/archiso/airootfs/etc/lsb-release
+	cp -f ../archiso/neofetch $buildFolder/archiso/airootfs/usr/bin/neofetch
+
 	echo
 
 

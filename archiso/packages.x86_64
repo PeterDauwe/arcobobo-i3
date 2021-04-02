@@ -593,6 +593,9 @@ noobie-i3wm-dconf
 ###########################################################################
 
 arco-calamares
+
+
+
 arcolinux-system-installation-git
 arcolinux-welcome-app-git
 arcolinux-calamares-tool-git
@@ -727,3 +730,4 @@ zathura-cb
 zathura-djvu
 vifm
 smplayer
+perl-locale-gettext
