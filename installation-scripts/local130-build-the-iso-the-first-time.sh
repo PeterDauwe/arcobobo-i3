@@ -188,10 +188,6 @@ echo
 	echo "Copying the profiledef.sh file to the build folder"
 	cp -f ../archiso/profiledef.sh $buildFolder/archiso/profiledef.sh
 	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
-
-	cp -f ../archiso/lsb-release2 $buildFolder/archiso/airootfs/etc/lsb-release2
-	cp -f ../archiso/neofetch $buildFolder/archiso/airootfs/usr/bin/neofetch
-
 	echo
 
 
@@ -243,6 +239,9 @@ echo
 	date_build=$(date -d now)
 	echo "Iso build on : "$date_build
 	sudo sed -i "s/\(^ISO_BUILD=\).*/\1$date_build/" $buildFolder/archiso/airootfs/etc/dev-rel
+
+	cp -f ../archiso/lsb-release $buildFolder/x86_64/airootfs/etc/lsb-release
+	cp -f ../archiso/neofetch $buildFolder/x86_64/airootfs/usr/bin/neofetch
 
 
 echo
