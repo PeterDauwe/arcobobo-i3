@@ -182,17 +182,6 @@ echo
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
 
-
-
-	echo "My changes - the numbering is here the builddate"
-	echo "Copying the profiledef.sh file to the build folder"
-	cp -f ../archiso/profiledef.sh $buildFolder/archiso/profiledef.sh
-	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
-	echo
-
-
-
-
 	echo "Changing group for polkit folder"
 	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
 	#is not working so fixing this during calamares installation

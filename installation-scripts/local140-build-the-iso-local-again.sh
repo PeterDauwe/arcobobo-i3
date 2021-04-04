@@ -146,7 +146,7 @@ echo
 	echo
 	echo "Git clone the latest ArcoLinux-iso from github"
 	echo
-	git clone https://github.com/arcolinux/arcolinux-iso ../work
+	git clone https://github.com/PeterDauwe/noobie-iso ../work
 
 	echo "Copying the Archiso folder to build work"
 	echo
@@ -182,15 +182,10 @@ echo
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
 
-
-
-	echo "My changes - the numbering is here the builddate"
-	echo "Copying the profiledef.sh file to the build folder"
-	cp -f ../archiso/profiledef.sh $buildFolder/archiso/profiledef.sh
+	echo "My changes - to build locally"
+	echo "Copying the pacman.conf file to the build folder"
+#	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
 	echo
-
-
-
 
 	echo "Changing group for polkit folder"
 	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
@@ -240,17 +235,17 @@ echo
 	sudo sed -i "s/\(^ISO_BUILD=\).*/\1$date_build/" $buildFolder/archiso/airootfs/etc/dev-rel
 
 
-echo
-echo "###########################################################"
-tput setaf 2
-echo "Phase 6 :"
-echo "- Cleaning the cache from /var/cache/pacman/pkg/"
-tput sgr0
-echo "###########################################################"
-echo
+#echo
+#echo "################################################################## "
+#tput setaf 2
+#echo "Phase 6 :"
+#echo "- Cleaning the cache from /var/cache/pacman/pkg/"
+#tput sgr0
+#echo "################################################################## "
+#echo
 
-	echo "Cleaning the cache from /var/cache/pacman/pkg/"
-	yes | sudo pacman -Scc
+	#echo "Cleaning the cache from /var/cache/pacman/pkg/"
+	#yes | sudo pacman -Scc
 
 echo
 echo "################################################################## "
@@ -279,22 +274,22 @@ echo
 
 	cd $outFolder
 
-	echo "Creating checksums for : "$isoLabel
-	echo "##################################################################"
-	echo
-	echo "Building sha1sum"
-	echo "########################"
-	sha1sum $isoLabel | tee $isoLabel.sha1
-	echo "Building sha256sum"
-	echo "########################"
-	sha256sum $isoLabel | tee $isoLabel.sha256
-	echo "Building md5sum"
-	echo "########################"
-	md5sum $isoLabel | tee $isoLabel.md5
-	echo
-	echo "Moving pkglist.x86_64.txt"
-	echo "########################"
-	cp $buildFolder/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".pkglist.txt"
+#	echo "Creating checksums for : "$isoLabel
+#	echo "##################################################################"
+#	echo
+#	echo "Building sha1sum"
+#	echo "########################"
+#	sha1sum $isoLabel | tee $isoLabel.sha1
+#	echo "Building sha256sum"
+#	echo "########################"
+#	sha256sum $isoLabel | tee $isoLabel.sha256
+#	echo "Building md5sum"
+#	echo "########################"
+#	md5sum $isoLabel | tee $isoLabel.md5
+#	echo
+#   echo "Moving pkglist.x86_64.txt"
+#	echo "########################"
+#	cp $buildFolder/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".pkglist.txt"
 
 
 
@@ -310,18 +305,18 @@ elif (( $SECONDS > 60 )) ; then
 else
     echo "Completed in $SECONDS seconds"
 fi
-	
-echo
-echo "##################################################################"
-tput setaf 2
-echo "Phase 9 :"
-echo "- Making sure we start with a clean slate next time"
-tput sgr0
-echo "################################################################## "
-echo
 
-	echo "Deleting the build folder if one exists - takes some time"
-	[ -d $buildFolder ] && sudo rm -rf $buildFolder
+#echo
+#echo "##################################################################"
+#tput setaf 2
+#echo "Phase 9 :"
+#echo "- Making sure we start with a clean slate next time"
+#tput sgr0
+#echo "################################################################## "
+#echo
+
+	#echo "Deleting the build folder if one exists - takes some time"
+	#[ -d $buildFolder ] && sudo rm -rf $buildFolder
 
 echo
 echo "##################################################################"

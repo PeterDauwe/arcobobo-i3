@@ -258,7 +258,7 @@ firefox
 #flashplugin
 #galculator
 #geany
-#gimp
+gimp
 gmrun
 #gsimplecal
 #guvcview
@@ -448,7 +448,7 @@ grub-customizer
 hardcode-fixer-git
 inxi
 mintstick-git
-neofetch
+#neofetch
 #numix-gtk-theme-git
 pamac-all
 #pamac-aur
@@ -724,6 +724,10 @@ zathura
 zathura-pdf-poppler
 zathura-cb
 zathura-djvu
-vifm
+noobie-zathura
+#vifm
+#noobie-vifm
 smplayer
-perl-locale-gettext
+noobie-mc
+noobie-smplayer
+noobie-neofetch

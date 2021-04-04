@@ -182,16 +182,10 @@ echo
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
 
-
-
-	echo "My changes - the numbering is here the builddate"
-	echo "Copying the profiledef.sh file to the build folder"
-	cp -f ../archiso/profiledef.sh $buildFolder/archiso/profiledef.sh
-	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
+	echo "My changes - to build locally"
+	echo "Copying the pacman.conf file to the build folder"
+#	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
 	echo
-
-
-
 
 	echo "Changing group for polkit folder"
 	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
@@ -240,9 +234,6 @@ echo
 	echo "Iso build on : "$date_build
 	sudo sed -i "s/\(^ISO_BUILD=\).*/\1$date_build/" $buildFolder/archiso/airootfs/etc/dev-rel
 
-	cp -f ../archiso/lsb-release $buildFolder/x86_64/airootfs/etc/lsb-release
-	cp -f ../archiso/neofetch $buildFolder/x86_64/airootfs/usr/bin/neofetch
-
 
 echo
 echo "###########################################################"
@@ -281,24 +272,26 @@ tput sgr0
 echo "###################################################################"
 echo
 
+
+
 	cd $outFolder
 
-	echo "Creating checksums for : "$isoLabel
-	echo "##################################################################"
-	echo
-	echo "Building sha1sum"
-	echo "########################"
-	sha1sum $isoLabel | tee $isoLabel.sha1
-	echo "Building sha256sum"
-	echo "########################"
-	sha256sum $isoLabel | tee $isoLabel.sha256
-	echo "Building md5sum"
-	echo "########################"
-	md5sum $isoLabel | tee $isoLabel.md5
-	echo
-	echo "Moving pkglist.x86_64.txt"
-	echo "########################"
-	cp $buildFolder/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".pkglist.txt"
+#	echo "Creating checksums for : "$isoLabel
+#	echo "##################################################################"
+#	echo
+#	echo "Building sha1sum"
+#	echo "########################"
+#	sha1sum $isoLabel | tee $isoLabel.sha1
+#	echo "Building sha256sum"
+#	echo "########################"
+#	sha256sum $isoLabel | tee $isoLabel.sha256
+#	echo "Building md5sum"
+#	echo "########################"
+#	md5sum $isoLabel | tee $isoLabel.md5
+#	echo
+#	echo "Moving pkglist.x86_64.txt"
+#	echo "########################"
+#	cp $buildFolder/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".pkglist.txt"
 
 
 
