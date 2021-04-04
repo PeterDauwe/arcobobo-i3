@@ -184,7 +184,7 @@ echo
 
 	echo "My changes - to build locally"
 	echo "Copying the pacman.conf file to the build folder"
-#	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
+	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
 	echo
 
 	echo "Changing group for polkit folder"
