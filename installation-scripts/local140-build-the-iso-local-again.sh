@@ -136,7 +136,7 @@ echo "################################################################## "
 tput setaf 2
 echo "Phase 3 :"
 echo "- Deleting the build folder if one exists"
-echo "- Git clone the latest ArcoLinux-iso from github"
+echo "- Git clone the latest ArcoBobo-iso from github"
 tput sgr0
 echo "################################################################## "
 echo
@@ -144,7 +144,7 @@ echo
 	echo "Deleting the build folder if one exists - takes some time"
 	[ -d $buildFolder ] && sudo rm -rf $buildFolder
 	echo
-	echo "Git clone the latest ArcoLinux-iso from github"
+	echo "Git clone the latest ArcoBobo-iso from github"
 	echo
 	git clone https://github.com/PeterDauwe/noobie-iso ../work
 
@@ -220,6 +220,7 @@ echo
 	#sddm.conf user-session
 	oldname5='Session=xfce'
 	newname5='Session='$dmDesktop
+
 
 	echo "Changing all references"
 	echo
