@@ -31,9 +31,9 @@ echo
 	dmDesktop="i3"
 	date_mybuild=$(date +%y)-$(date +%m)-$(date +%d)
 	#original =  y$(date +%y).m$(date +%m).d$(date +%d)
-	arcolinuxVersion=$date_mybuild
+	arcoboboVersion=$date_mybuild
 
-	isoLabel='arcobobo-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
+	isoLabel='arcobobo-'$desktop'-'$arcoboboVersion'-x86_64.iso'
 
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 52-1"
@@ -43,7 +43,7 @@ echo
 
 	echo "################################################################## "
 	echo "Building the desktop                   : "$desktop
-	echo "Building version                       : "$arcolinuxVersion
+	echo "Building version                       : "$arcoboboVersion
 	echo "Iso label                              : "$isoLabel
 	echo "Do you have the right archiso version? : "$archisoVersion
 	echo "What is the required archiso version?  : "$archisoRequiredVersion
@@ -136,7 +136,7 @@ echo "################################################################## "
 tput setaf 2
 echo "Phase 3 :"
 echo "- Deleting the build folder if one exists"
-echo "- Git clone the latest ArcoLinux-iso from github"
+echo "- Git clone the latest ArcoBobo-iso from github"
 tput sgr0
 echo "################################################################## "
 echo
@@ -144,7 +144,7 @@ echo
 	echo "Deleting the build folder if one exists - takes some time"
 	[ -d $buildFolder ] && sudo rm -rf $buildFolder
 	echo
-	echo "Git clone the latest ArcoLinux-iso from github"
+	echo "Git clone the latest ArcoBobo-iso from github"
 	echo
 	git clone https://github.com/PeterDauwe/noobie-iso ../work
 
@@ -173,7 +173,7 @@ echo
 
 	echo "Getting the last version of bashrc in /etc/skel"
 	echo
-	wget https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -O $buildFolder/archiso/airootfs/etc/skel/.bashrc
+	wget https://raw.githubusercontent.com/PeterDauwe/noobie-root/master/etc/skel/.bashrc-latest -O $buildFolder/archiso/airootfs/etc/skel/.bashrc
 
 	echo "Removing the old packages.x86_64 file from build folder"
 	rm $buildFolder/archiso/packages.x86_64
@@ -181,6 +181,7 @@ echo
 	echo "Copying the new packages.x86_64 file to the build folder"
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
+
 
 	echo "Changing group for polkit folder"
 	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d

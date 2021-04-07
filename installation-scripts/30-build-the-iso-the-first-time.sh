@@ -31,9 +31,9 @@ echo
 	dmDesktop="i3"
 	date_mybuild=$(date +%y)-$(date +%m)-$(date +%d)
 	#original =  y$(date +%y).m$(date +%m).d$(date +%d)
-	arcolinuxVersion=$date_mybuild
+	arcoboboVersion=$date_mybuild
 
-	isoLabel='arcobobo-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
+	isoLabel='arcobobo-'$desktop'-'$arcoboboVersion'-x86_64.iso'
 
 	# setting of the general parameters
 	archisoRequiredVersion="archiso 52-1"
@@ -43,7 +43,7 @@ echo
 
 	echo "################################################################## "
 	echo "Building the desktop                   : "$desktop
-	echo "Building version                       : "$arcolinuxVersion
+	echo "Building version                       : "$arcoboboVersion
 	echo "Iso label                              : "$isoLabel
 	echo "Do you have the right archiso version? : "$archisoVersion
 	echo "What is the required archiso version?  : "$archisoRequiredVersion
@@ -173,7 +173,7 @@ echo
 
 	echo "Getting the last version of bashrc in /etc/skel"
 	echo
-	wget https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -O $buildFolder/archiso/airootfs/etc/skel/.bashrc
+	wget https://raw.githubusercontent.com/PeterDauwe/noobie-root/master/etc/skel/.bashrc-latest -O $buildFolder/archiso/airootfs/etc/skel/.bashrc
 
 	echo "Removing the old packages.x86_64 file from build folder"
 	rm $buildFolder/archiso/packages.x86_64
@@ -182,10 +182,6 @@ echo
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
 
-	echo "My changes - to build locally"
-	echo "Copying the pacman.conf file to the build folder"
-	cp -f ../archiso/pacman.conf $buildFolder/archiso/pacman.conf
-	echo
 
 	echo "Changing group for polkit folder"
 	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
@@ -221,7 +217,6 @@ echo
 	oldname5='Session=xfce'
 	newname5='Session='$dmDesktop
 
-
 	echo "Changing all references"
 	echo
 	sed -i 's/'$oldname1'/'$newname1'/g' $buildFolder/archiso/profiledef.sh
@@ -236,17 +231,17 @@ echo
 	sudo sed -i "s/\(^ISO_BUILD=\).*/\1$date_build/" $buildFolder/archiso/airootfs/etc/dev-rel
 
 
-#echo
-#echo "################################################################## "
-#tput setaf 2
-#echo "Phase 6 :"
-#echo "- Cleaning the cache from /var/cache/pacman/pkg/"
-#tput sgr0
-#echo "################################################################## "
-#echo
+echo
+echo "###########################################################"
+tput setaf 2
+echo "Phase 6 :"
+echo "- Cleaning the cache from /var/cache/pacman/pkg/"
+tput sgr0
+echo "###########################################################"
+echo
 
-	#echo "Cleaning the cache from /var/cache/pacman/pkg/"
-	#yes | sudo pacman -Scc
+	echo "Cleaning the cache from /var/cache/pacman/pkg/"
+	yes | sudo pacman -Scc
 
 echo
 echo "################################################################## "
@@ -275,22 +270,22 @@ echo
 
 	cd $outFolder
 
-#	echo "Creating checksums for : "$isoLabel
-#	echo "##################################################################"
-#	echo
-#	echo "Building sha1sum"
-#	echo "########################"
-#	sha1sum $isoLabel | tee $isoLabel.sha1
-#	echo "Building sha256sum"
-#	echo "########################"
-#	sha256sum $isoLabel | tee $isoLabel.sha256
-#	echo "Building md5sum"
-#	echo "########################"
-#	md5sum $isoLabel | tee $isoLabel.md5
-#	echo
-#   echo "Moving pkglist.x86_64.txt"
-#	echo "########################"
-#	cp $buildFolder/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".pkglist.txt"
+	echo "Creating checksums for : "$isoLabel
+	echo "##################################################################"
+	echo
+	echo "Building sha1sum"
+	echo "########################"
+	sha1sum $isoLabel | tee $isoLabel.sha1
+	echo "Building sha256sum"
+	echo "########################"
+	sha256sum $isoLabel | tee $isoLabel.sha256
+	echo "Building md5sum"
+	echo "########################"
+	md5sum $isoLabel | tee $isoLabel.md5
+	echo
+	echo "Moving pkglist.x86_64.txt"
+	echo "########################"
+	cp $buildFolder/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".pkglist.txt"
 
 
 
@@ -306,18 +301,18 @@ elif (( $SECONDS > 60 )) ; then
 else
     echo "Completed in $SECONDS seconds"
 fi
+	
+echo
+echo "##################################################################"
+tput setaf 2
+echo "Phase 9 :"
+echo "- Making sure we start with a clean slate next time"
+tput sgr0
+echo "################################################################## "
+echo
 
-#echo
-#echo "##################################################################"
-#tput setaf 2
-#echo "Phase 9 :"
-#echo "- Making sure we start with a clean slate next time"
-#tput sgr0
-#echo "################################################################## "
-#echo
-
-	#echo "Deleting the build folder if one exists - takes some time"
-	#[ -d $buildFolder ] && sudo rm -rf $buildFolder
+	echo "Deleting the build folder if one exists - takes some time"
+	[ -d $buildFolder ] && sudo rm -rf $buildFolder
 
 echo
 echo "##################################################################"
