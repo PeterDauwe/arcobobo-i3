@@ -452,6 +452,7 @@ mintstick-git
 #numix-gtk-theme-git
 pamac-all
 #pamac-aur
+paru-bin
 #peek
 #pulseaudio-equalizer-ladspa
 #pyakm
@@ -462,7 +463,7 @@ python-pywal
 sublime-text-dev
 #the_platinum_searcher-bin
 tmux
-trizen
+#trizen
 urxvt-perls
 urxvt-resize-font-git
 #wttr
@@ -501,6 +502,7 @@ arcolinux-local-xfce4-git
 #arcolinux-logout-themes-git
 arcolinux-mirrorlist-git
 arcolinux-neofetch-git
+arcolinux-paru-git
 
 ######################################
 #arcolinux-nitrogen-git
@@ -732,4 +734,4 @@ noobie-mc
 noobie-smplayer
 #noobie-neofetch
 zsh-autosuggestions
-
+zsh-history-substring-search
