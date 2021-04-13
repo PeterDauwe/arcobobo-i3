@@ -353,7 +353,7 @@ laptop-detect
 lsb-release
 mlocate
 #nomacs
-oh-my-zsh-git
+#oh-my-zsh-git
 p7zip
 #plank
 playerctl
@@ -393,8 +393,8 @@ xdg-desktop-portal-gtk
 #youtube-dl
 zenity
 zsh
-zsh-completions
-zsh-syntax-highlighting
+#zsh-completions
+#zsh-syntax-highlighting
 
 ###########################################################################
 #                           ARCOLINUX_REPOS
@@ -544,7 +544,7 @@ noobie-wallpaper1
 
 ##############################
 #arcolinux-zsh-git
-noobie-zsh
+noobie-zsh-custom
 ###############################
 
 
@@ -727,11 +727,6 @@ zathura-pdf-poppler
 zathura-cb
 zathura-djvu
 noobie-zathura
-#vifm
-#noobie-vifm
 smplayer
 noobie-mc
 noobie-smplayer
-#noobie-neofetch
-zsh-autosuggestions
-zsh-history-substring-search
