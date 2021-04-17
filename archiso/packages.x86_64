@@ -253,13 +253,13 @@ atom
 #deadbeef
 dmenu
 #evolution
-feh
+##-feh
 firefox
 #flashplugin
 #galculator
 #geany
 gimp
-gmrun
+##-gmrun
 #gsimplecal
 #guvcview
 imagemagick
@@ -273,12 +273,12 @@ numlockx
 #qbittorrent
 scrot
 simplescreenrecorder
-termite
-variety
+##-termite
+##-variety
 #vlc
 
 ###conky
-jq
+##-jq
 #lm_sensors
 
 ###cursors
@@ -353,7 +353,7 @@ laptop-detect
 lsb-release
 mlocate
 #nomacs
-#oh-my-zsh-git
+oh-my-zsh-git
 p7zip
 #plank
 playerctl
@@ -368,11 +368,12 @@ qt5ct
 qt5-webkit
 #powertop
 #redshift
+ripgrep
 rofi
 rxvt-unicode
 #simple-scan
 #shotwell
-speedtest-cli
+speedtest-cli-git
 #timeshift
 #telegram-desktop
 #tlp
@@ -386,15 +387,15 @@ unzip
 w3m
 webkit2gtk
 wmctrl
-xapps
+xapp
 xdo
 xdotool
 xdg-desktop-portal-gtk
 #youtube-dl
 zenity
 zsh
-#zsh-completions
-#zsh-syntax-highlighting
+zsh-completions
+zsh-syntax-highlighting
 
 ###########################################################################
 #                           ARCOLINUX_REPOS
@@ -438,8 +439,8 @@ mkinitcpio-openswap
 
 ###utilities-repo
 appstream
-archiso
-conky-lua-archers
+##-archiso
+##-conky-lua-archers
 downgrade
 #font-manager-git
 #glxinfo
@@ -462,11 +463,11 @@ python-pywal
 #screenkey-git
 sublime-text-dev
 #the_platinum_searcher-bin
-tmux
+##-tmux
 #trizen
-urxvt-perls
-urxvt-resize-font-git
-#wttr
+##-urxvt-perls
+##-urxvt-resize-font-git
+wttr
 yad
 #yakuake
 yay-bin
@@ -485,7 +486,7 @@ yay-bin
 ###########################################################################
 
 arcolinux-bin-git
-arcolinux-conky-collection-git
+##-arcolinux-conky-collection-git
 arcolinux-fonts-git
 
 #################################################
@@ -501,7 +502,7 @@ arcolinux-local-xfce4-git
 #arcolinux-logout-git
 #arcolinux-logout-themes-git
 arcolinux-mirrorlist-git
-arcolinux-neofetch-git
+##-arcolinux-neofetch-git
 arcolinux-paru-git
 
 ######################################
@@ -509,7 +510,7 @@ arcolinux-paru-git
 noobie-nitrogen
 #######################################
 
-arcolinux-pipemenus-git
+#arcolinux-pipemenus-git
 
 ########################################################
 #arcolinux-polybar-git
@@ -529,12 +530,12 @@ noobie-system-config
 #################################################
 
 arcolinux-systemd-services-git
-arcolinux-termite-themes-git
+#arcolinux-termite-themes-git
 arcolinux-tweak-tool-git
 
 ######################################
 #arcolinux-variety-git
-noobie-variety
+#noobie-variety
 #####################################
 
 ########################################################
@@ -714,12 +715,12 @@ xfce4-taskmanager
 polybar
 autorandr
 alacritty
-qt5-quickcontrols2
-qt5-graphicaleffects
+#qt5-quickcontrols2
+#qt5-graphicaleffects
 unclutter
 noobie-alacritty
-i3lock
-wttr
+i3lock-color
+
 
 
 zathura
