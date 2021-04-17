@@ -540,7 +540,7 @@ arcolinux-tweak-tool-git
 
 ########################################################
 #arcolinux-wallpapers-git
-noobie-wallpaper1
+noobie-local-wallpaper
 ########################################################
 
 ##############################
@@ -560,7 +560,7 @@ noobie-logout
 
 ###############################################
 #arcolinux-i3wm-git
-noobie-i3wm
+noobie-i3wm-local-wallpaper
 ##############################################
 
 
