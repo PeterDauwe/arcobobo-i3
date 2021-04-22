@@ -190,7 +190,6 @@ blueberry
 bluez
 bluez-libs
 bluez-utils
-#bluez-firmware
 pulseaudio-bluetooth
 
 ###network
@@ -295,6 +294,7 @@ ttf-hack
 #ttf-inconsolata
 #ttf-liberation
 ttf-roboto
+ttf-roboto-mono
 ttf-ubuntu-font-family
 
 ###icons
@@ -439,7 +439,7 @@ mkinitcpio-openswap
 
 ###utilities-repo
 appstream
-##-archiso
+archiso
 ##-conky-lua-archers
 downgrade
 #font-manager-git
@@ -485,6 +485,8 @@ yay-bin
 #                           ARCOLINUX FOLDER
 ###########################################################################
 
+#arcolinux-arc-kde
+#arcolinux-arc-themes-git
 arcolinux-bin-git
 ##-arcolinux-conky-collection-git
 arcolinux-fonts-git
@@ -588,7 +590,8 @@ noobie-config-i3wm
 
 ###################################
 #arcolinux-i3wm-dconf-git
-noobie-i3wm-dconf
+arcolinux-dconf-all-desktops-git
+#noobie-i3wm-dconf
 ####################################""
 
 ###########################################################################
