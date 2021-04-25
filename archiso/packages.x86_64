@@ -577,8 +577,8 @@ noobie-xfce
 #                           ARCOLINUX CONFIG FOLDER
 ###########################################################################
 
-arcolinux-config-all-desktops-git
-
+#arcolinux-config-all-desktops-git
+noobie-config-desktop
 
 #######################################
 ###arcolinux-config-i3wm-git
