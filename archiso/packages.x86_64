@@ -252,13 +252,13 @@ atom
 #deadbeef
 dmenu
 #evolution
-##-feh
+feh
 firefox
 #flashplugin
 #galculator
 #geany
 gimp
-##-gmrun
+gmrun
 #gsimplecal
 #guvcview
 imagemagick
@@ -272,12 +272,12 @@ numlockx
 #qbittorrent
 scrot
 simplescreenrecorder
-##-termite
-##-variety
+termite
+variety
 #vlc
 
 ###conky
-##-jq
+jq
 #lm_sensors
 
 ###cursors
@@ -440,7 +440,7 @@ mkinitcpio-openswap
 ###utilities-repo
 appstream
 archiso
-##-conky-lua-archers
+conky-lua-archers
 downgrade
 #font-manager-git
 #glxinfo
@@ -449,7 +449,7 @@ grub-customizer
 hardcode-fixer-git
 inxi
 mintstick-git
-#neofetch
+neofetch
 #numix-gtk-theme-git
 pamac-all
 #pamac-aur
@@ -463,10 +463,10 @@ python-pywal
 #screenkey-git
 sublime-text-dev
 #the_platinum_searcher-bin
-##-tmux
-#trizen
-##-urxvt-perls
-##-urxvt-resize-font-git
+tmux
+trizen
+urxvt-perls
+urxvt-resize-font-git
 wttr
 yad
 #yakuake
@@ -488,7 +488,7 @@ yay-bin
 #arcolinux-arc-kde
 #arcolinux-arc-themes-git
 arcolinux-bin-git
-##-arcolinux-conky-collection-git
+arcolinux-conky-collection-git
 arcolinux-fonts-git
 
 #################################################
@@ -504,7 +504,7 @@ arcolinux-local-xfce4-git
 #arcolinux-logout-git
 #arcolinux-logout-themes-git
 arcolinux-mirrorlist-git
-##-arcolinux-neofetch-git
+arcolinux-neofetch-git
 arcolinux-paru-git
 
 ######################################
@@ -512,7 +512,7 @@ arcolinux-paru-git
 noobie-nitrogen
 #######################################
 
-#arcolinux-pipemenus-git
+arcolinux-pipemenus-git
 
 ########################################################
 #arcolinux-polybar-git
@@ -532,12 +532,12 @@ noobie-system-config
 #################################################
 
 arcolinux-systemd-services-git
-#arcolinux-termite-themes-git
+arcolinux-termite-themes-git
 arcolinux-tweak-tool-git
 
 ######################################
 #arcolinux-variety-git
-#noobie-variety
+noobie-variety
 #####################################
 
 ########################################################
@@ -719,8 +719,8 @@ xfce4-taskmanager
 polybar
 autorandr
 alacritty
-#qt5-quickcontrols2
-#qt5-graphicaleffects
+qt5-quickcontrols2
+qt5-graphicaleffects
 unclutter
 noobie-alacritty
 i3lock-color
