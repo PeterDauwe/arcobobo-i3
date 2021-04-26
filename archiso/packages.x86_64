@@ -533,7 +533,7 @@ noobie-system-config
 
 arcolinux-systemd-services-git
 arcolinux-termite-themes-git
-arcolinux-tweak-tool-git
+#arcolinux-tweak-tool-git
 
 ######################################
 #arcolinux-variety-git
