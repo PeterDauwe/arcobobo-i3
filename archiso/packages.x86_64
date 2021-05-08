@@ -617,8 +617,8 @@ arco-calamares
 #arcolinux-system-installation-git
 
 noobie-system-installation
-arcolinux-welcome-app-git
-arcolinux-calamares-tool-git
+#arcolinux-welcome-app-git
+#arcolinux-calamares-tool-git
 
 ###########################################################################
 #                                CALAMARES DEPENDENCIES
