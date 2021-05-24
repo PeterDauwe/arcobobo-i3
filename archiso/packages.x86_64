@@ -745,7 +745,7 @@ i3lock-color
 
 
 zathura
-zathura-pdf-poppler
+zathura-pdf-mupdf
 zathura-cb
 zathura-djvu
 noobie-zathura

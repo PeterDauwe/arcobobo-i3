@@ -15,6 +15,24 @@
 #
 ##################################################################################################################
 SECONDS=0
+
+sound() {
+  # plays sounds in sequence and waits for them to finish
+  for s in $@; do
+    paplay $s
+  done
+}
+sn1() {
+  sound /usr/share/sounds/ubuntu/stereo/dialog-information.ogg
+}
+sn2() {
+  sound /usr/share/sounds/freedesktop/stereo/complete.oga
+}
+sn3() {
+  sound /usr/share/sounds/freedesktop/stereo/suspend-error.oga
+}
+
+
 echo
 echo "################################################################## "
 tput setaf 2
@@ -36,7 +54,7 @@ echo
 	isoLabel='arcobobo-'$desktop'-'$arcoboboVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 53-1"
+	archisoRequiredVersion="archiso 54-1"
 	buildFolder=$HOME"/arcobobo-build"
 	outFolder=$HOME"/ArcoBobo-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
@@ -65,6 +83,7 @@ echo
 	echo "or update your system"
 	echo "###################################################################################################"
 	tput sgr0
+	sn3
 	exit 1
 	fi
 
@@ -307,7 +326,7 @@ elif (( $SECONDS > 60 )) ; then
 else
     echo "Completed in $SECONDS seconds"
 fi
-	
+	sn2
 echo
 echo "##################################################################"
 tput setaf 2
