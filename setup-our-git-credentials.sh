@@ -45,7 +45,7 @@ echo "3.  Raniel"
 echo "4.  John"
 echo "5.  Steve"
 echo "6.  Brad"
-echo "7.  fake1"
+echo "7.  Peter"
 echo "8.  fake2"
 echo "9.  fake3"
 echo "10. fake4"
@@ -118,7 +118,13 @@ case $CHOICE in
 			git config --global credential.helper 'cache --timeout=32000'
       ;;
     7 )
-      echo
+      git config --global pull.rebase false
+			git config --global push.default simple
+			git config --global user.name "Peter Dauwe"
+			git config --global user.email "bobo5290461@gmail.com"
+			sudo git config --system core.editor nano
+			git config --global credential.helper cache
+			git config --global credential.helper 'cache --timeout=32000'
       ;;
     8 )
       echo
