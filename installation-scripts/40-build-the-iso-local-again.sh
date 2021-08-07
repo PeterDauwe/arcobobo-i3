@@ -31,19 +31,19 @@ echo
 	dmDesktop="i3"
 	date_mybuild=$(date +%y)-$(date +%m)-$(date +%d)
 	#original =  y$(date +%y).m$(date +%m).d$(date +%d)
-	arcoboboVersion=$date_mybuild
+	arcolinuxVersion=$date_mybuild
 
-	isoLabel='arcobobo-'$desktop'-'$arcoboboVersion'-x86_64.iso'
+	isoLabel='arcobobo-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 53-1"
-	buildFolder=$HOME"/arcobobo-build"
-	outFolder=$HOME"/ArcoBobo-Out"
+	archisoRequiredVersion="archiso 57-2"
+	buildFolder=$HOME"/arcolinuxb-build"
+	outFolder=$HOME"/ArcoLinuxB-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
 
 	echo "################################################################## "
 	echo "Building the desktop                   : "$desktop
-	echo "Building version                       : "$arcoboboVersion
+	echo "Building version                       : "$arcolinuxVersion
 	echo "Iso label                              : "$isoLabel
 	echo "Do you have the right archiso version? : "$archisoVersion
 	echo "What is the required archiso version?  : "$archisoRequiredVersion
@@ -65,7 +65,6 @@ echo
 	echo "or update your system"
 	echo "###################################################################################################"
 	tput sgr0
-	exit 1
 	fi
 
 echo
@@ -136,7 +135,7 @@ echo "################################################################## "
 tput setaf 2
 echo "Phase 3 :"
 echo "- Deleting the build folder if one exists"
-echo "- Git clone the latest ArcoBobo-iso from github"
+echo "- Git clone the latest ArcoLinux-iso from github"
 tput sgr0
 echo "################################################################## "
 echo
@@ -144,9 +143,29 @@ echo
 	echo "Deleting the build folder if one exists - takes some time"
 	[ -d $buildFolder ] && sudo rm -rf $buildFolder
 	echo
-	echo "Git clone the latest ArcoBobo-iso from github"
+	echo "Git clone the latest ArcoLinux-iso from github"
 	echo
-	git clone https://github.com/PeterDauwe/noobie-iso ../work
+	git clone https://github.com/arcolinux/arcolinuxl-iso ../work
+	echo
+
+	echo "Adding the content of the /personal folder"
+	echo
+	cp -rf ../personal/ ../work/archiso/airootfs/
+	if test -f ../work/archiso/airootfs/personal/.gitkeep ; then
+		echo ".gitkeep is now removed"
+		echo
+		rm ../work/archiso/airootfs/personal/.gitkeep
+    fi
+
+	echo "Adding the content of the /personal folder"
+	echo
+	cp -rf ../personal-root/ ../work/archiso/airootfs/
+	if test -f ../work/archiso/airootfs/personal-root/.gitkeep ; then
+		echo ".gitkeep is now removed"
+		echo
+		rm ../work/archiso/airootfs/personal-root/.gitkeep
+    fi
+
 
 	echo "Copying the Archiso folder to build work"
 	echo
@@ -173,16 +192,16 @@ echo
 
 	echo "Getting the last version of bashrc in /etc/skel"
 	echo
-	wget https://raw.githubusercontent.com/PeterDauwe/noobie-root/master/etc/skel/.bashrc-latest -O $buildFolder/archiso/airootfs/etc/skel/.bashrc
+	wget https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -O $buildFolder/archiso/airootfs/etc/skel/.bashrc
 
 	echo "Removing the old packages.x86_64 file from build folder"
 	rm $buildFolder/archiso/packages.x86_64
 	echo
+    echo "Copying the extra software from personalsoftware.x86_64 into packages.x86_64"
+    cat ../archiso/personalsoftware.x86_64 >> ../archiso/packages.x86_64
 	echo "Copying the new packages.x86_64 file to the build folder"
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
 	echo
-
-
 	echo "Changing group for polkit folder"
 	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
 	#is not working so fixing this during calamares installation
@@ -200,17 +219,17 @@ echo
 	#Setting variables
 
 	#profiledef.sh
-	oldname1='iso_name="arcolinux'
+	oldname1='iso_name="arcolinuxl'
 	newname1='iso_name="arcobobo-'$desktop
 
-	oldname2='iso_label="arcolinux'
+	oldname2='iso_label="arcolinuxl'
 	newname2='iso_label="arcobobo-'$desktop
 
-	oldname3='ArcoLinux'
+	oldname3='ArcoLinuxL'
 	newname3='ArcoBobo-'$desktop
 
 	#hostname
-	oldname4='ArcoLinux'
+	oldname4='ArcoLinuxL'
 	newname4='ArcoBobo-'$desktop
 
 	#sddm.conf user-session
@@ -224,6 +243,12 @@ echo
 	sed -i 's/'$oldname3'/'$newname3'/g' $buildFolder/archiso/airootfs/etc/dev-rel
 	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/airootfs/etc/hostname
 	sed -i 's/'$oldname5'/'$newname5'/g' $buildFolder/archiso/airootfs/etc/sddm.conf
+	#bios
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/syslinux/archiso_sys-linux.cfg
+	#uefi
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/efiboot/loader/entries/archiso-x86_64-linux.conf
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/efiboot/loader/entries/nomodeset.conf
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/efiboot/loader/entries/nvidia.conf
 
 	echo "Adding time to /etc/dev-rel"
 	date_build=$(date -d now)
